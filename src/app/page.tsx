@@ -44,7 +44,7 @@ const SMSNotificationApp = () => {
 
         setBeneficiaries(prev => [...prev, ...newBeneficiaries]);
         setSuccessMessage(`${newBeneficiaries.length} bénéficiaires ajoutés depuis le fichier`);
-      } catch (error) {
+      } catch  {
         alert("Erreur lors de la lecture du fichier. Vérifiez le format.");
       }
     };
@@ -87,7 +87,7 @@ const SMSNotificationApp = () => {
       });
       
       setSuccessMessage(`✅ ${beneficiaries.length} notifications envoyées avec succès`);
-    } catch (error) {
+    } catch  {
       alert("Erreur lors de l'envoi des notifications");
     } finally {
       setIsSending(false);
